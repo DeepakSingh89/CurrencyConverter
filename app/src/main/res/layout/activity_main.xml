@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/cardview1"
+        app:cardCornerRadius="4dp"
+        android:layout_gravity="start">
+
+    <TextView
+        android:id="@+id/euro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/euro"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="@color/design_default_color_secondary" />
+
+        <TextView
+            android:id="@+id/txt_lastupd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:padding="5dp"
+        android:text="Refresh"
+        android:layout_gravity="end"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/cnvrtedfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="From"
+            android:textColor="@color/design_default_color_secondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinnerfrom"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="28dp"
+            android:prompt="@xml/spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cnvrtedfrom"
+            app:layout_constraintVertical_bias="0.52"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+        <EditText
+            android:id="@+id/amount_edittxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Enter Amount"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/cnvrtedto"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toEndOf="@+id/cnvrtedfrom"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_convert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="48dp"
+            android:padding="5dp"
+            android:text="@string/convert"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerTo"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/spinnerfrom"
+            app:layout_constraintTop_toBottomOf="@+id/amount_edittxt"
+            app:layout_constraintVertical_bias="0.764"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/cnvrtedto"
+            android:layout_width="72dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:text="To"
+            android:textColor="@color/design_default_color_secondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerTo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.176"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:prompt="@xml/spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="InvalidId,MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/GBP"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:layout_alignParentStart="true"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="28dp" />
+
+
+
+        <TextView
+            android:id="@+id/HKD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:layout_below="@id/GBP"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:includeFontPadding="false"
+            android:textSize="12sp" />
+
+
+
+        <TextView
+            android:id="@+id/DKK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="124dp"
+            android:layout_below="@id/HKD"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/INR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DKK"
+            android:layout_marginStart="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/MXN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/INR"
+            android:layout_marginStart="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/AUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/MXN"
+            android:layout_marginStart="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/USD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/AUD"
+            android:layout_marginStart="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/NZD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/USD"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/JPY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/NZD"
+            android:layout_marginStart="124dp"
+            android:layout_marginTop="5dp"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/RUB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="124dp"
+            android:layout_below="@id/JPY"
+            android:layout_gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="365dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

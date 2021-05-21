@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fxrates</string>
+    <string name="euro">Euro</string>
+    <string name="convert">Convert</string>
+</resources>

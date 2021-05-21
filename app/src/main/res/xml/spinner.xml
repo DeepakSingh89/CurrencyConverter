@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="rates_array">
+        <item>GBP</item>
+        <item>AUD</item>
+        <item>USD</item>
+        <item>INR</item>
+        <item>JPY</item>
+        <item>NZD</item>
+        <item>RUB</item>
+        <item>HKD</item>
+        <item>DKK</item>
+        <item>MXN</item>
+    </string-array>
+
+</resources>
